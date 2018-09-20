@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <title>Форма входа</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+            integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+            <h5 class="my-0 mr-md-auto font-weight-normal">JSExpert</h5>
+            <nav class="my-2 my-md-0 mr-md-3v show" id="nav_show_block">
+                <a class="p-2 text-dark" href="#">Главная</a>
+                <a class="p-2 text-dark" href="#gallery" id="showGalleryBlock">Галлерея</a>
+                <a class="p-2 text-dark" href="#info" id="showUserInfoBlock">О пользователе</a>
+            </nav>
+            <button type="button" class="btn btn-primary show" id="btnSignOut">Выход</button>
+        </div>
+
+        <main class="text-center" role="main">
+            <!-- sign_in_Block-->
+            <form class="form-signin show" id="main_form">
+                <div role="alert" id="alertWindows"></div>
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required=""
+                    autofocus="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+                    autocomplete="on">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="Password" id="inputPassword" class="form-control" placeholder="Password" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+                    autocomplete="on">
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me" id="checkBoxRememberMe"> Remember me
+                    </label>
+                </div>
+                <button type="button" class="btn btn-lg btn-primary btn-block" id="sign-in">Sign in</button>
+                <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+            </form>
+            <!-- user_Info_Block-->
+            <div id="user_info" class="container userInfo hide">
+                <form>
+                    <h1 class="info_1">Информация о пользователе</h1>
+                    <p>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-5">
+                                <input type="email" class="form-control" id="user_email" placeholder="Email" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-5">
+                                <input type="password" class="form-control" id="user_password" placeholder="Password"
+                                    readonly>
+                            </div>
+                            <button type="button" class="btn btn-secondary" id="showPassword">Показать пароль</button>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-5 offset-md-2">
+                                <button type="button" class="btn btn-primary btn-md btn-block" id="buttonReturn">Вернуться
+                                    назад</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+
+            <!-- Gallery_Block-->
+            <div class="container hide" id="galleryBlock">
+                <div class="row text-center">
+                    <div class="col-lg-12 col-md-12">
+                        <h3>Галерея</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <button class="btn btn-default" type="button" id="add" data-toggle="tooltip" data-placement="right"
+                            title="Добавить изображение" data-original-title="Добавить одно изображение">Добавить
+                            изображение</button>
+                        <p></p>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 text-center">
+                                <select id="sort-selector" class="form-control">
+                                    <option default="" value="0">По имени А - Я</option>
+                                    <option value="1">По имени Я - А</option>
+                                    <option value="2">Сначала новые</option>
+                                    <option value="3">Сначала старые</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 col-md-6 text-center">
+                                <p class="count-text"><span id="count"> Добавленно изображений: 0</span></p>
+                            </div>
+                            <button class="btn btn-outline-success createImg" type="button" id="createImg" title="Создать изображение">Создать
+                                изображение</button>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row" id="result"></div>
+            </div>
+
+            <!-- IMG_Block-->
+            <div id="create_img_block" class="container userInfo hide">
+                <div class="row">
+                    <div class="col-md-5 offset-md-2">
+                        <button type="button" class="btn btn-primary btn-md btn-block" id="buttonReturnToGalleryBlock">Вернуться
+                            назад</button>
+                    </div>
+                </div>
+                <p></p>
+                <form class="text-left">
+                    <div class="form-group row">
+                        <label for="inputUrl3" class="col-sm-2 col-form-label">URL</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="inputUrl" placeholder="URL">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputDescription3" class="col-sm-2 col-form-label">Description</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="inputDescription" placeholder="Description">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-5 offset-md-2">
+                            <button type="button" class="btn btn-outline-success btn-md btn-block show" id="btnCreateUpdateInfo">Создать
+                                / Обновить</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            <span id="modal_body_value"></span>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <script src="https://momentjs.com/downloads/moment.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+
+
+
+        <!-- gallery -->
+        <script type="module" src=js/gallery/gallery.service.js> </script> <script type="module" src=js/gallery/gallery.model.js>
+            </script> <script type="module" src=js/gallery/gallery.view.js> </script> <script type="module" src=js/gallery/gallery.controler.js>
+            </script> <!-- login -->
+            <script type="module" src=js/login/login.controler.js></script>
+        <script type="module" src=js/login/login.model.js> </script> <script type="module" src=js/login/login.view.js>
+            </script> <script type="module" src=js/login/login.service.js> </script> <!--user-info -->
+            <script type="module" src=js/userInfo/userInfo.service.js></script>
+        <script type="module" src=js/userInfo/userInfo.model.js> </script> <script type="module" src=js/userInfo/userInfo.view.js>
+            </script> <script type="module" src=js/userInfo/userInfo.controller.js> </script> <!--app-->
+            <script type="module" src=js/utils.js></script>
+        <script type="module" src=js/router.js> </script> <script type="module" src=js/app.js> </script> </body> </html>
